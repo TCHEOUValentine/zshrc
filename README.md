@@ -15,19 +15,27 @@ ZSH has more features, more customizability and many useful plugins that make li
 
 Look which shell you use
 
-`which $SHELL`
+```
+which $SHELL
+```
 
 Install zsh
 
-`sudo pacman -S zsh`
+```
+sudo pacman -S zsh
+```
 
 Basic zsh completion
 
-`sudo pacman -S zsh-completions`
+```
+sudo pacman -S zsh-completions
+```
 
 Change your default shell to zsh
 
-`chsh -s /usr/bin/zsh`
+```
+chsh -s /usr/bin/zsh
+```
 
 ## Oh My Zsh
 
@@ -69,7 +77,9 @@ git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zs
 
 ### Download
 
-`git clone https://github.com/TCHEOUValentine/zshrc`
+```
+git clone https://github.com/TCHEOUValentine/zshrc
+```
 
 ### Warning
 
