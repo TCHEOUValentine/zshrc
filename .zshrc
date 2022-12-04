@@ -1,14 +1,11 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# History
+zstyle ':omz:update' mode auto
+
 HISTFILE=~/.histfile
 HISTSIZE=2000
 SAVEHIST=10000
@@ -16,13 +13,8 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 unsetopt beep
 
-# Zsh theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Uncomment the following line to use case-sensitive completion.
-CASE_SENSITIVE="true"
-
-# Plugins
 plugins=(
     git
     zsh-syntax-highlighting
@@ -31,18 +23,14 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 fi
 
-# Change the color for directories with ls
 export LS_COLORS="di=1;32:ex=1;36"
 
-# Highlight color definitions
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[default]=bold
@@ -88,10 +76,9 @@ alias zrc='vim ~/.zshrc'
 alias gpo='git push origin master'
 alias gp='git pull'
 alias gs='git status'
+alias gt='git push origin master --follow-tags'
 alias glf='git ls-files'
-alias gogo='source ~/.bashrc'
 
-# Functions
 mkd() {
     mkdir $1 && cd $1
 }
@@ -122,5 +109,4 @@ ex() {
      fi
 }
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

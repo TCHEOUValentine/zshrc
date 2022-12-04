@@ -71,10 +71,6 @@ git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zs
 
 ## My Zsh config
 
-### Screenshot
-
-![](screenshot.png)
-
 ### Download
 
 ```
